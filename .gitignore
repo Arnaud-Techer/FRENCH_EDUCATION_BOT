@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+french_education_bot
+
+# IDE settings
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# unecessary file and folder
+notes.txt
+storage/
+chromedriver-win64/
