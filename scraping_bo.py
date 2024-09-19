@@ -3,8 +3,6 @@ from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
 import time
 
-
-
 def contains_any(link:str,sublinks:list[str]) -> bool:
     """Check if there is any element of a list sublinks inside a str link
 
