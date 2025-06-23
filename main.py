@@ -18,6 +18,6 @@ prompt = st.text_input("Enter a question / request about the education system : 
 
 if st.button("Get the answer"):
     st.write("Processing the request...")
-    result = agent.query(prompt)
+    result = agent.query(prompt).response
     st.write(result)
     

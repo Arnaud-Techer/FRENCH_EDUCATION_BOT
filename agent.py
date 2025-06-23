@@ -8,6 +8,7 @@ from llama_index.core import (StorageContext,
                               DocumentSummaryIndex
                               )
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from sentence_transformers import SentenceTransformer
 from llama_index.core.tools import QueryEngineTool,ToolMetadata
 from llama_index.core import Settings
 from llama_index.llms.ollama import Ollama
@@ -16,8 +17,10 @@ from register_prompt import register_prompt_engine
 from scraping_bo import ScrapOfficialBulletin
 from constants import *
 
-# define the embeded model to use to store the documents and the llm model use for the agent
-embed_model = HuggingFaceEmbedding(model_name=HUGGINGFACE_MODEL_NAME)
+# download the hugging face model first to avoid error
+# Trigger model download and cache creation
+# SentenceTransformer("BAAI/bge-small-en-v1.5",cache_folder=r"C:\Users\teche\.cache\huggingface\hub")
+embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5",cache_folder=r"C:\Users\teche\.cache\huggingface\hub")
 llm = Ollama(model=OLLAMA_MODEL_NAME,request_timeout=360.)
 
 Settings.embed_model = embed_model
