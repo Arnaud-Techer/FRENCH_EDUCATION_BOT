@@ -13,12 +13,12 @@ This project use a local LLM model in order to answer user's questions.
 The simple interface is based on Streamlit and allowed the user to create the embedded database using the .pdf file and Scrape last education information from the governement website in order to complete the database. 
 
 <p align="center">
-  <img src="images/basic_bot_interface_streamlit.png" width="500" height="500"/>
+  <img src="images/basic_bot_interface_streamlit.png" width="700" height="500"/>
 </p>
 
 The AI Model display the answer to the user as a conversation with a bot.
 Hereafter, you will find an exemple of question with the AI Agent answer based on the associate .PDF file. 
 
 <p align="center">
-  <img src="images/exemple_chat_interface.png" width="500" height="500"/>
+  <img src="images/exemple_chat_interface.png" width="700" height="500"/>
 </p>
